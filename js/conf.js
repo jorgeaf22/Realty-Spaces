@@ -794,7 +794,8 @@ function startUploadFile(authToken) {
 			var googleURL = data.data[0].url;
 			var fileKey = data.data[0].fileKey;
 			googleUpload(googleURL, fileKey);
-			document.getElementById("fileNameLabel").innerHTML = "Select File";			
+			document.getElementById("fileNameLabel").innerHTML = "Select File";	
+			document.getElementById("fileName").value = "";			
 		},
 		error: function (error) {
 			console.log(`Error ${error}`);
