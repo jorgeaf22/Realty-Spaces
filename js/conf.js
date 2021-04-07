@@ -756,7 +756,8 @@ function googleUpload(storageURL, fileKey) {
 						"icon": "",
 						"name": mySelectedFile.name,
 						"provider": "native",
-						"providerFileType": mySelectedFile.type
+						"providerFileType": mySelectedFile.type,
+						"thumbnailFile": fileKey
 					}]
 				},
 				topicId: spaceId,
