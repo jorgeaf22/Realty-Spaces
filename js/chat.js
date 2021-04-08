@@ -46,9 +46,9 @@ function connectSocket() {
         $('#chatMsg2').prop("disabled", false);
         $('#sendMsg2').prop("disabled", false);
         $('#message2').prop("readonly", false);
-        populateChats();
+/*         populateChats();
         populateTasks();
-        populateIdeas();
+        populateIdeas(); */
     });
 
     socketio.on('CHANNEL_UNSUBSCRIBED', function() {
@@ -242,12 +242,6 @@ function startConnect() {
         disconnect();
         return;
     }
-    // input = document.getElementById("password2").value;
-    // if (input.trim() != '') {
-    //     password = document.getElementById("password2").value;
-    // } else {
-    //     password = null;
-    // }
 
     $.ajax({
         data: JSON.stringify({
