@@ -1,0 +1,141 @@
+#topVideoRow{
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.fa-user{
+    @media screen and (max-width: 768px) {
+        margin-left: 2% !important;
+        padding-bottom: 0.4rem;
+        position: absolute;
+        left: 3.3rem;
+    }
+}
+
+#spacesControlsButtonGroup{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+#chatDisplayDiv{
+    @media screen and (max-width: 768px) {
+        max-height: auto !important;
+        padding-bottom: 2rem;
+    }
+}
+
+.rounded-circle{
+    @media screen and (max-width: 768px) {
+       right: 1rem !important;
+    }
+}
+#videoModeContainer{
+    @media screen and (max-width: 768px) {
+        padding: 0 !important;
+     }
+}
+
+// .littleBigVideo{
+//     left: 50%;
+//     margin-left: -100px;
+// }
+
+#topVideoRow{
+    .col{
+        @media screen and (max-width: 768px) {
+            padding: 0.6rem;
+            padding-top: 0.9rem;
+         }
+    }
+}
+
+#videoDisplayDivParentRow{
+    @media screen and (max-width: 768px) {
+        border: 0 !important;
+    }
+}
+#videoDisplayDiv{
+    @media screen and (max-width: 768px) {
+        border: 0 !important;
+    }
+}
+
+.row{
+    @media screen and (max-width: 768px) {
+        --bs-gutter-x: 0.5rem !important;
+    } 
+}
+
+#spacesControlsDiv{
+    @media screen and (max-width: 768px) {
+        margin-bottom: 0.2rem;
+    }
+}
+
+.float{
+    @media screen and (max-width: 768px) {
+        width: 60px;
+        height: 60px;
+        bottom: 1rem;
+        right: 1rem;
+        border-radius: 1rem;
+        img{
+            height: 30px;
+        }
+    } 
+}
+
+#toggleChatButton{
+    @media screen and (max-width: 768px) {
+        opacity: 1 !important;
+        margin-bottom: 1rem;
+        padding: 8px 30px;
+        border-radius: 5px;
+    }
+}
+#showVideoButton{
+    @media screen and (max-width: 768px) {
+        opacity: 1 !important;
+        margin-bottom: 1rem;
+        padding: 8px 30px;
+        border-radius: 5px;
+    }
+}
+.fa-gear{
+    @media screen and (max-width: 768px) {
+        font-size: 2rem !important;
+        position: absolute;
+        top: 0.7rem;
+        right: 0.7rem;
+        color: #da291c !important;
+        z-index: 999;
+        opacity: 1;
+    }
+}
+
+#toggleVideoButton{
+    @media screen and (max-width: 768px) {
+        width: 90px;
+        padding: 5px;
+    }
+}
+
+#usernameDisplay{
+    @media screen and (max-width: 768px) {
+        font-weight: bold;
+        border-bottom: 2px solid #f1f1f1;
+        display: block;
+        padding-bottom: 0.6rem;
+        margin: 0 auto !important;
+        padding-left: 0.7rem;
+    }
+}
+
+.btn-danger{
+    @media screen and (max-width: 768px) {
+        padding: 12px 26px;
+    } 
+}
+

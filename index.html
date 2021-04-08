@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/respond.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
@@ -114,7 +115,6 @@
                     </h4>
                     <br />
                     <br />
-                    <a class="btn btn-primary" href="">Search</a>
                   </div>
                   <div class="col-lg-7 hero__content__img"></div>
                 </div>
@@ -492,9 +492,10 @@
                         >
                           <div id="topVideoRow" class="row">
                             <div class="col">
-                              <div>
+                              <div class="d-flex justify-content-between align-items-center">
                                 <span id="roomName">My Meeting Room</span
                                 ><i
+                                  id="usericon"
                                   class="fa fa-user brandColor"
                                   style="
                                     margin-left: 55%;
@@ -502,24 +503,40 @@
                                     color: #666;
                                   "
                                 ></i
+                                ><span
+                                  id="usernameDisplay"
+                                  style="margin-left: 1%"
+                                  >ajs</span
                                 ><i
                                   class="fa fa-gear brandColor"
                                   style="
                                     margin-left: 1%;
-                                    font-size: 1.2rem;
+                                    font-size: 1.6rem;
                                     color: #666;
                                   "
                                   onClick="confUI.showSpeakerSettings()"
                                   data-bs-toggle="modal"
                                   data-bs-target="#speakerSettingsModal"
                                 ></i>
-                                <span
-                                  id="usernameDisplay"
-                                  style="margin-left: 1%"
-                                  >ajs</span
-                                >
+                                
                               </div>
                             </div>
+                          </div>
+                          <div class="d-flex justify-content-center text-center">
+                            <button
+                            id="toggleChatButton"
+                            class="btn btn-primary text-center toggleButton brandBackgroundColor"
+                            style="display: none"
+                          >
+                            Show Chat <i style="color: #fff; padding-left: 6px;" class="fa fa-paper-plane"></i>
+                          </button>
+                            <button
+                            id="showVideoButton"
+                            class="btn btn-primary text-center toggleButton brandBackgroundColor"
+                            style="display: none"
+                          >
+                            Show Video <i style="color: #fff; padding-left: 6px;" class="fa fa-video-camera"></i>
+                          </button>
                           </div>
                           <div id="videoDisplayDivParentRow" class="row">
                             <div class="col-9" id="videoDisplayDiv">
@@ -529,13 +546,8 @@
                               >
                                 Toggle
                               </button>
-                              <button
-                                id="toggleChatButton"
-                                class="btn btn-primary toggleButton brandBackgroundColor brandText"
-                                style="display: none"
-                              >
-                                Show Chat
-                              </button>
+                              
+                              
                               <button
                                 id="increaseZoomButton"
                                 class="btn btn-primary zoomButton brandBackgroundColor brandText"
@@ -579,7 +591,7 @@
                               ></video>
                               <div id="screenReceiveFrame"></div>
                             </div>
-                            <div class="col-3 mt-4" id="chatDisplayDiv">
+                            <div class="col-3 mt-md-4 mt-1" id="chatDisplayDiv">
                               <div id="littleVideoDiv">
                                 <video
                                   autoplay="autoplay"
@@ -597,7 +609,7 @@
                                 ></video>
                               </div>
                               <div>
-                                <ul class="nav nav-tabs chat-nav-tabs">
+                                <ul id="navtabs" class="nav nav-tabs chat-nav-tabs">
                                   <li id="chatTab" class="nav-item">
                                     <a
                                       class="brandBackgroundColor brandText nav-link active"
@@ -607,7 +619,7 @@
                                       >Chat</a
                                     >
                                   </li>
-                                  <li id="showVideoButton" class="nav-item">
+                                  <!-- <li id="showVideoButton" class="nav-item">
                                     <a
                                       class="brandBackgroundColor brandText nav-link"
                                       role="tab"
@@ -615,7 +627,7 @@
                                       href="#tab-1"
                                       >Video</a
                                     >
-                                  </li>
+                                  </li> -->
                                 </ul>
                                 <div class="tab-content">
                                   <div
@@ -626,7 +638,7 @@
                                     <div id="console-log" readonly=""></div>
                                     <div class="d-flex" style="border-top: 1px solid #eee;">
 
-                                      <textarea autofocus rows="1" class="mt-0 p-3" style="width: 100%; resize: none; border: 0; border-radius: 0 0 10px 10px; overflow: auto; outline: none;"
+                                      <textarea placeholder="Chat With Specialist" autofocus rows="1" class="mt-0 p-3" style="width: 100%; resize: none; border: 0; border-radius: 0 0 10px 10px; overflow: auto; outline: none;"
                                       id="message"
                                       ></textarea>
                                       <button
@@ -929,7 +941,7 @@
       <section class="search container">
         <div class="search__nav-bar">
           <div class="tabs">
-            <ul class="nav nav-tabs p-0" id="myTab" role="tablist">
+            <ul class="nav nav-tabs p-0 ms-2" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
                 <a
                   class="nav-link active"
@@ -1080,7 +1092,6 @@
                 <p>3</p>
                 <p>Beds</p>
               </div>
-              <div class="col-6 house-data"></div>
               <div class="col-6 house-data">
                 <p>2</p>
                 <p>Baths</p>
@@ -1093,32 +1104,23 @@
                 <p>1,092</p>
                 <p>SQFT</p>
               </div>
-              <div class="col-6 house-data">
+              <div class="col-6 house-data house-data--last">
                 <p>0</p>
                 <p>1/2 Baths</p>
               </div>
-              <div class="col-6 house-data house-data--last"></div>
               <div class="col-6 house-data house-data--last">
                 <p>$275</p>
                 <p>$/SQFT</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-12 house-data house-data--neighborhood">
-                <p>Neighborhood:</p>
+              <div class="col-6 house-data house-data--neighborhood house-data--last">
+                <p class="align-self-center">Neighborhood:</p>
+                <p class="align-self-center"><b>County</b> </p>
               </div>
-              <div class="col-12 house-data house-data--type">
-                <p>Type:</p>
-              </div>
-              <div
-                class="col-6 house-data house-data--country house-data--last"
-              >
-                <p>County</p>
-              </div>
-              <div
-                class="col-6 house-data house-data--multifamily house-data--last"
-              >
-                <p>Multi-Family</p>
+              <div class="col-6 house-data house-data--type house-data--last">
+                <p class="align-self-center">Type:</p>
+                <p class="align-self-center"><b>Multi-Family</b> </p>
               </div>
             </div>
 
@@ -1267,16 +1269,13 @@
       </footer>
     </div>
 
-    <div id="speakerSettingsModal" class="modal fade" tabindex="-1" aria-hidden="true" role="dialog">
+    <div id="speakerSettingsModal" class="modal fade" data-bs-backdrop="static" tabindex="-1" aria-hidden="true" role="dialog">
       <div style="max-width: 400px;" class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
           
           <div class="modal-body p-4">
-            <h2 class="mb-4" style="font-size: 1.5rem; text-align: center; font-family: 'Noto Sans JP'; font-weight: 400"><i
-              class="fa fa-gear mr-2"
-              style="color: #666;"
-            ></i> Device Settings</h2>
+            <h2 class="mb-4" style="font-size: 1.5rem; text-align: center; font-family: 'Noto Sans JP'; font-weight: 400">Device Settings</h2>
             <table align="center">
               <tr>
                 <td align="right">

@@ -36,6 +36,8 @@ var confUI = {
 
     applyMobileStyle: function() {
         $('#chatDisplayDiv').hide();
+        $('#roomName').hide();
+        $('#navtabs').hide();
         $('#spacesControlsButtonGroup').css({ 'width': '100%', 'margin-left': '0%', 'margin-right': '0%' });
         $('#videoDisplayDiv').removeClass('col-9');
         $('#chatDisplayDiv').removeClass('col-3');
@@ -49,6 +51,7 @@ var confUI = {
             $('#chatDisplayDiv').hide();
             $('#showVideoButton').hide();
             $('#videoDisplayDiv').show();
+            $('#toggleChatButton').show();
 
             setTimeout(function() {
                 $('#showVideoButton').find('a').removeClass('active');
@@ -61,6 +64,7 @@ var confUI = {
             $('#videoDisplayDiv').hide();
             $('#chatDisplayDiv').show();
             $('#showVideoButton').show();
+            $('#toggleChatButton').hide();
         });
 
         $('#screenshare').prop('disabled', true);
@@ -112,17 +116,17 @@ var confUI = {
         //Populate Audio Devices Select
         populateAudioDevices();
 
-        if (confUI.mobile) {
-            $('#toggleChatButton').hide();
-        }
+        // if (confUI.mobile) {
+        //     $('#toggleChatButton').hide();
+        // }
     },
 
     closeSpeakerSettings: function() {
 
         confUI.showVideoToggle();
-        if (confUI.mobile) {
-            $('#toggleChatButton').show();
-        }
+        // if (confUI.mobile) {
+        //     $('#toggleChatButton').show();
+        // }
     },
 
     hideVideoToggle: function() {

@@ -1,0 +1,137 @@
+@media screen and (max-width: 768px) {
+  #topVideoRow {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fa-user {
+    margin-left: 2% !important;
+    padding-bottom: 0.4rem;
+    position: absolute;
+    left: 3.3rem;
+  }
+}
+
+#spacesControlsButtonGroup {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  #chatDisplayDiv {
+    max-height: auto !important;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rounded-circle {
+    right: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #videoModeContainer {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #topVideoRow .col {
+    padding: 0.6rem;
+    padding-top: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #videoDisplayDivParentRow {
+    border: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #videoDisplayDiv {
+    border: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    --bs-gutter-x: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #spacesControlsDiv {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .float {
+    width: 60px;
+    height: 60px;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 1rem;
+  }
+  .float img {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #toggleChatButton {
+    opacity: 1 !important;
+    margin-bottom: 1rem;
+    padding: 8px 30px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #showVideoButton {
+    opacity: 1 !important;
+    margin-bottom: 1rem;
+    padding: 8px 30px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fa-gear {
+    font-size: 2rem !important;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    color: #da291c !important;
+    z-index: 999;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #toggleVideoButton {
+    width: 90px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #usernameDisplay {
+    font-weight: bold;
+    border-bottom: 2px solid #f1f1f1;
+    display: block;
+    padding-bottom: 0.6rem;
+    margin: 0 auto !important;
+    padding-left: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-danger {
+    padding: 12px 26px;
+  }
+}

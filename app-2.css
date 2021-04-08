@@ -576,7 +576,7 @@ body {
 
 @media (max-width: 768px) {
     .modal-dialog-spaces {
-        max-width: 80%;
+        max-width: 90%;
         height: auto;
     }
     .guest-modal {
