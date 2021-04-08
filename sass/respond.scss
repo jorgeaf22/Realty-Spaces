@@ -139,3 +139,21 @@
     } 
 }
 
+.konvajs-content{
+    width: 100% !important;
+    max-height: 600px !important;
+}
+
+
+.increasebtn{
+    margin-right: 1rem;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        margin: 0.5rem;
+ 
+    i{
+        font-size: 1rem;
+        color: #fff;
+    }
+}
