@@ -224,17 +224,20 @@ function clearTrace() {
 }
 
 function disconnect() {
-    var spaceToUnsubscribe = {
-        channel: {
-            _id: spacesID,
-            type: 'topic',
-            password: password
-        }
-    };
-    socketio.emit('UNSUBSCRIBE_CHANNEL', spaceToUnsubscribe);
-    init();
-    clearTrace();
-    socketio = null;
+    if (socketio != null) {
+		var spaceToUnsubscribe = {
+			channel: {
+				_id: spacesID,
+				type: 'topic',
+				password: password
+			}
+		};
+		socketio.emit('UNSUBSCRIBE_CHANNEL', spaceToUnsubscribe);
+		init();
+		clearTrace();
+		socketio.disconnect();
+		socketio = null;
+	}
 }
 
 function startConnect() {
