@@ -829,6 +829,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/recording.gif": {
+		"ft": 4194304,
+		"iS": 8668,
+		"oA": 0,
+		"oAP": "/img/recording.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"/img/search-icon.png": {
 		"ft": 32768,
 		"iS": 1274,

@@ -86,6 +86,7 @@ var confUI = {
     attachEventHandlers: function() {
         confUI.attachedEventHandlers = true;
         $('#connectSocket').click(openSpacesConference);
+        $('#signout').click(closeSpacesConference);
         $('#muteAudio').click(muteAudio);
         $('#muteVideo').click(muteVideo);
         $('#startRecording').click(startRecording);
@@ -109,6 +110,7 @@ var confUI = {
             confUI.callDefaults.hideVideo = checked;
         });
     },
+
 
     showSpeakerSettings: function() {
         console.log("Show Speaker Settings");
@@ -205,6 +207,10 @@ var confUI = {
         $('#entryModeDiv').show();
         $('#videoModeDiv').hide();
         $('#find').prop("disabled", false);
+        $('#floatbtn1').show();
+	    $('#floatbtn2').hide();
+        $('#loginout').show();
+	$('#loginout2').hide();
     },
 
     muteVideo: function() {
@@ -243,6 +249,7 @@ var confUI = {
         $('.zoomButton').show();
         //$('#chatDisplayDiv').hide();
     },
+    
 
     stopScreenShare: function() {
         document.getElementById("screenshare").innerHTML = '<img src="./images/screenshare-on@2.png" />';

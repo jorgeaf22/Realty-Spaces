@@ -728,6 +728,21 @@ function uploadFile() {
 	})
 }
 
+function minimizeWindow() {
+	$('#floatbtn1').hide();
+	$('#floatbtn2').show();
+	$('#loginout').hide();
+	$('#loginout2').css("display", "inline");;
+	$('#loginOkModal').modal('hide');
+}
+
+function restoreWindow() {
+	$('#loginOkModal').modal('show');
+	$('#floatbtn1').show();
+	$('#floatbtn2').hide();
+}
+
+
 function googleUpload(storageURL, fileKey) {
 	var mySelectedFile = document.getElementById('fileName').files[0];
 	$.ajax({

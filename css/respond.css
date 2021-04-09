@@ -152,3 +152,27 @@
   font-size: 1rem;
   color: #fff;
 }
+
+#email3, #email {
+  text-transform: lowercase;
+}
+
+.btn-close {
+  position: absolute !important;
+  right: -1rem !important;
+  top: -1rem !important;
+  background: #da291c;
+  opacity: 1 !important;
+  color: #fff !important;
+  border-radius: 50%;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+.btn-close i {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+#loginout, #loginout {
+  display: inline;
+}

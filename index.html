@@ -40,6 +40,7 @@
     <script src="js/lib/AvayaClientServices.min.js"></script>
     <script src="js/lib/AvayaClientServices.Renderer.min.js"></script>
     <script src="js/lib/AvayaClientServicesWorker.min.js"></script>
+    
 
     <title>Avaya</title>
 
@@ -72,6 +73,7 @@
               <div class="login">
                 <div class="login__items">
                   <i><img src="img/user-icon.png" alt="" /></i>
+                  <div id="loginout">
                   <a
                     type="button"
                     data-bs-toggle="modal"
@@ -87,6 +89,15 @@
                     data-bs-dismiss="modal"
                     >Sign Up</a
                   >
+                </div>
+                <div style="display: none;" id="loginout2">
+                  <span></span>
+                  <a
+                    type="button"
+                    id="signout"
+                    >Sign Out</a
+                  >
+                </div>
                 </div>
               </div>
               <div class="nav">
@@ -115,6 +126,7 @@
                     </h4>
                     <br />
                     <br />
+                    <a class="btn btn-primary" href="">Search</a>
                   </div>
                   <div class="col-lg-7 hero__content__img"></div>
                 </div>
@@ -128,12 +140,29 @@
           href="#"
           class="float"
           type="button"
+          id="floatbtn"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
           <img
             class="myfloat"
             src="img/floating-btn.png"
+            alt=""
+            height="50px"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="float"
+          type="button"
+          id="floatbtn2"
+          style="display: none;"
+          onclick="restoreWindow()"
+        >
+          <img
+            class="myfloat"
+            src="img/recording.gif"
             alt=""
             height="50px"
           />
@@ -293,7 +322,14 @@
                               id="email3"
                               required
                               class="form-control"
+                              onkeyup="return forceLower(this);"
                             />
+                            <script>
+                              function forceLower(strInput) 
+                              {
+                              strInput.value=strInput.value.toLowerCase();
+                              }​
+                            </script>
                           </div>
                           <div class="mb-4">
                             <label class="form-label">Password:</label>
@@ -407,6 +443,7 @@
                                 id="email"
                                 type="email"
                                 required
+                                onkeyup="return forceLower(this);"
                               />
                             </div>
                             <div class="mb-4 col-12">
@@ -478,7 +515,7 @@
                   class="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                ></button>
+                >xxx</button>
               </div>
               <div class="modal-body">
                 <div class="container-fluid">
@@ -491,6 +528,12 @@
                           style="display: grid; width: 100%"
                         >
                           <div id="topVideoRow" class="row">
+                            <button
+                            type="button"
+                            class="btn-close"
+                            onclick="minimizeWindow()"
+                            aria-label="Close"
+                          ><i class="fa fa-compress" aria-hidden="true"></i></button>
                             <div class="col">
                               <div class="d-flex justify-content-between align-items-center">
                                 <span id="roomName">My Meeting Room</span
@@ -655,7 +698,7 @@
                                       <i style="color: #fff;" class="fa fa-paper-plane"></i> 
                                     </button>
                                     </div>
-									<script> document.getElementById('message').focus(); </script>                                   
+								                  	<script> document.getElementById('message').focus(); </script>                                   
                                     <div style="height: 50px;" class="d-flex mt-3 justify-content-between">
                                       <input type="file" name="file-1" id="fileName" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
                                       <label for="fileName">
@@ -1122,6 +1165,7 @@
               <div class="col-6 house-data house-data--neighborhood house-data--last">
                 <p class="align-self-center">Neighborhood:</p>
                 <p class="align-self-center"><b>County</b> </p>
+                <p class="align-self-center">Arapahoe</p>
               </div>
               <div class="col-6 house-data house-data--type house-data--last">
                 <p class="align-self-center">Type:</p>
@@ -1130,9 +1174,7 @@
             </div>
 
             <div class="row mt-3">
-              <div class="col-12 arapahoe">
-                <p>Arapahoe</p>
-              </div>
+
               <div class="col-12">
                 <h5 class="house-description__title">Description</h5>
                 <p class="house-description__text">
