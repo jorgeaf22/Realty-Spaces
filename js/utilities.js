@@ -48,7 +48,9 @@ function findSpacesUser() {
 			var password = data.data[0].password;
 			if (document.getElementById("password3").value != password) {
 				alert("Invalid Password");
+				$('#find').prop("disabled", false);
 			} else {
+				
 				setSpaceId(data.data[0].room);
 				openSpacesConference();
 				// location.href = "loggedin.html"; 
@@ -59,11 +61,17 @@ function findSpacesUser() {
 			}
 		} else {
 			alert("User not found");
+			$('#find').prop("disabled", false);
 		}
 	}).catch(function(err) {
 		console.log("findSpacesUser Failure");
+		$('#find').prop("disabled", false);
 	})		
 }
+
+$('#find').click(function() {
+	$('#find').prop("disabled", true);
+});
 
 function deleteSpacesUser() {
 	getAccessToken().then(function(data) {

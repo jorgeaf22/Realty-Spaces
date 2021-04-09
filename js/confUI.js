@@ -204,6 +204,7 @@ var confUI = {
         //$('#connectSocket').find('img')[0].src = './images/voice@2.png';
         $('#entryModeDiv').show();
         $('#videoModeDiv').hide();
+        $('#find').prop("disabled", false);
     },
 
     muteVideo: function() {
