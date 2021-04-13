@@ -1323,59 +1323,24 @@
           
           <div class="modal-body p-4">
             <h2 class="mb-4" style="font-size: 1.5rem; text-align: center; font-family: 'Noto Sans JP'; font-weight: 400">Device Settings</h2>
-            <table align="center">
-              <tr>
-                <td align="right">
-                  <label for="micList"><b>Microphone:</b> </label>
-                </td>
-                <td align="left">
-                  <select
-                    class="form-control"
-                    cols="10"
-                    id="micList"
-                    name="micList"
-                    onClick="selectMic()"
-                  ></select>
-                </td>
-              </tr>
-              <tr>
-                <td align="right"><label for="cameraList"><b>Camera:</b> </label></td>
-                <td align="left">
-                  <select
-                    class="form-control"
-                    cols="10"
-                    id="cameraList"
-                    name="cameraList"
-                    onClick="selectCamera()"
-                  ></select>
-                </td>
-              </tr>
-              <tr>
-                <td align="right">
-                  <label for="speakersList"><b>Speakers:</b> </label>
-                </td>
-                <td align="left">
-                  <select
-                    class="form-control"
-                    cols="10"
-                    id="speakersList"
-                    name="speakersList"
-                    onClick="selectSpeakers()"
-                  ></select>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger p-2"
-              data-bs-dismiss="modal"
-              onClick="confUI.closeSpeakerSettings()"
-            >
-              Close
-            </button>
-          </div>
+            <table>
+             <tr>
+                <td align="right"><label for = "micList"> Microphone:    </label></td>
+                <td align="left"><select class="form-control" cols="10" id="micList" name="micList" onclick="selectMic()"></select></td>
+             </tr>
+             <tr>
+                <td align="right"><label for = "cameraList">Camera:    </label></td>
+                <td align="left"><select class="form-control" cols="10" id="cameraList" name="cameraList" onclick="selectCamera()"></select></td>
+             </tr>
+             <tr>
+                <td align="right"><label for = "speakersList">Speakers:   </label> </td>
+                <td align="left"><select class="form-control" cols="10" id="speakersList" name="speakersList" onclick="selectSpeakers()"></select></td>
+             </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-danger--small" data-bs-dismiss="modal" onclick="confUI.closeSpeakerSettings()">Close</button>
+        </div>
         </div>
       </div>
     </div>
