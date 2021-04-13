@@ -210,7 +210,7 @@ var confUI = {
         $('#floatbtn1').show();
 	    $('#floatbtn2').hide();
         $('#loginout').show();
-	$('#loginout2').hide();
+	    $('#loginout2').hide();
     },
 
     muteVideo: function() {
