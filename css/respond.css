@@ -168,6 +168,11 @@
   width: 2rem !important;
   height: 2rem !important;
 }
+@media screen and (max-width: 768px) {
+  .btn-close {
+    left: -1rem !important;
+  }
+}
 .btn-close i {
   color: #fff;
   font-size: 1.3rem;
@@ -175,4 +180,16 @@
 
 #loginout, #loginout {
   display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .chat-in {
+    padding: 1rem 0rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-chat h1 {
+    font-size: 1.5rem !important;
+  }
 }

@@ -171,7 +171,10 @@
     color: #fff !important; 
     border-radius: 50%; 
     width: 2rem !important; 
-    height: 2rem !important; 
+    height: 2rem !important;
+    @media screen and (max-width: 768px) {
+        left: -1rem !important;
+    } 
     i{
         color: #fff;
         font-size: 1.3rem;
@@ -179,4 +182,18 @@
 }
 #loginout, #loginout{
     display: inline;
+}
+
+.chat-in{
+    @media screen and (max-width: 768px) {
+        padding: 1rem 0rem;
+    }   
+}
+
+.title-chat{
+    h1{
+        @media screen and (max-width: 768px) {
+            font-size: 1.5rem !important;
+        }  
+    }
 }
